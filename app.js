@@ -89,7 +89,7 @@ function displayCountStats() {
 }
 
 function displaySlogans(){
-    displaySloganEl.textContent = '';
+    displaySloganEl.textContent = ``;
     for (let slogan of sloganArr){
         let pTag = document.createElement('p');
         displaySloganEl.append(pTag);
@@ -107,14 +107,12 @@ function displayWelcome(){
     }
 }
 
-
-
 let waterScenes = [{ display: 'Industrial', value: '1' }, { display: 'European', value: '2' },
-    { display: 'Neon', value: '3' }]; 
+    { display: 'Neon', value: '3' }, { display: 'Renaissance', value: '4' }]; 
 let skylineScenes = [{ display: 'Neon', value: '1' }, { display: 'European', value: '2' }, 
-    { display: 'Industrial', value: '3' }];
+    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' }];
 let natureScenes = [{ display: 'European', value: '1' }, { display: 'Neon', value: '2' }, 
-    { display: 'Industrial', value: '3' }];
+    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' }];
 
 function getDropdownItems() {
     for (let waterScene of waterScenes){

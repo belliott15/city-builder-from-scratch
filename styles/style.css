@@ -34,7 +34,7 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: .5fr 3.5fr;
+    grid-template-rows: .25fr 3.75fr;
     /* grid-template-columns: 2fr 1fr 2fr; */
     justify-content: center;
     align-items: center;
@@ -117,13 +117,6 @@ p {
     margin: 0 auto;
 }
 
-#first-column > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
 #first-column > div{
     height: 100%;
     width: 100%;
@@ -132,14 +125,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
-#second-column {
-    padding: 0;
-    margin: 0 auto;
-}
 .welcome{
-    font-size: 2em;
+    font-size: 4em;
     font-family: Abril Fatface, sans-serif;
 }
 

@@ -72,6 +72,7 @@ IMPURE: displaySlogans() : clears DOM, loops through slogans, displays slogans o
 -Wrap the slogan input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
 
 -Use a radio button (probably the most challenging form input) to change between 'night mode' and 'day mode'. When in night mode, only show images of night-time and vice-versa.
-Add a selectable background noise to your city (traffic, birds, coffeeshop, for example)
+
+-Add a selectable background noise to your city (traffic, birds, coffeeshop, for example)
 
 -In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
