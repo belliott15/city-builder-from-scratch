@@ -67,7 +67,7 @@ sloganButton.addEventListener('click', () => {
     userSloganInput.value = '';
     displaySlogans();
 
-    if (sloganArr.length >=3) {
+    if (sloganArr.length >= 3) {
         sloganArr.shift();
     }
   //add a classList so it will change the display style. 
@@ -93,12 +93,12 @@ function displaySlogans(){
 
 
 
-let waterScenes = [{ display: 'Industrial', value: '1'}, {display: 'European', value: '2'},
+let waterScenes = [{ display: 'Industrial', value: '1' }, { display: 'European', value: '2' },
     { display: 'Neon', value: '3' }]; 
-let skylineScenes = [{ display: 'Neon', value: '1'}, {display: 'European', value: '2'}, 
-    {display: 'Industrial', value: '3'},];
-let natureScenes = [{display: 'European', value: '1'}, {display: 'Neon', value: '2'}, 
-    {display: 'Industrial', value: '3'}];
+let skylineScenes = [{ display: 'Neon', value: '1' }, { display: 'European', value: '2' }, 
+    { display: 'Industrial', value: '3' }];
+let natureScenes = [{ display: 'European', value: '1' }, { display: 'Neon', value: '2' }, 
+    { display: 'Industrial', value: '3' }];
 
 function getDropdownItems() {
     for (let waterScene of waterScenes){
