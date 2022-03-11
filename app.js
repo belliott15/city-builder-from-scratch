@@ -65,7 +65,7 @@ userCityButton.addEventListener('click', () => {
     displayWelcome();
     if (cityNames.length >= 0){
         cityNames.shift();
-  }
+    }
 });
 
 sloganButton.addEventListener('click', () => {
