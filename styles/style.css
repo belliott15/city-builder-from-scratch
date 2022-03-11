@@ -34,7 +34,8 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: .5fr 3.5fr;
+    /* grid-template-columns: 2fr 1fr 2fr; */
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -49,11 +50,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    /* padding-top: var(--gutter); */
+    /* padding-bottom: var(--gutter); */
+    /* margin-top: var(--gutter); */
+    /* margin-bottom: var(--gutter); */
+    /* border: solid 2px var(--color1); */
 }
 
 header {
@@ -102,6 +103,7 @@ img {
     height: 13rem;
     border-radius: 50%;
     border: double black 2px;
+    max-width: 310px;
 }
 
 p {
@@ -109,31 +111,38 @@ p {
     font-size: 20px;
 }
 
-#first-column {
+#row-two {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr .5fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+#first-column > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 #first-column > div{
     height: 100%;
     width: 100%;
     /* border: 1px solid black; */
-    margin: 0 auto;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#second-column {
+    padding: 0;
+    margin: 0 auto;
+}
 .welcome{
     font-size: 2em;
     font-family: Abril Fatface, sans-serif;
 }
 
-#third-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
 
 #third-column > div {
     /* border: solid black 1px; */
@@ -153,8 +162,8 @@ select {
     margin: 10px;
     height: 30px;
     font-size: 1.2em;
+    border-radius: 20px;
 }
-
 
 
 .slogan {
@@ -166,9 +175,10 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0 auto;
 }
+
 
 input {
     border-radius: 10px;
@@ -178,9 +188,19 @@ input {
     border: inset rgb(83, 28, 28) 2px;
 }
 
+#city-button {
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+    background-color:rgb(83, 28, 28);
+    color: white;
+    font-family: Abril Fatface, sans-serif;
+    border-radius: 10px;
+}
+
 #slogan-button {
     margin: 10px;
-    width: 100%;
+    width: 90%;
     height: 30px;
     background-color:rgb(83, 28, 28);
     color: white;
