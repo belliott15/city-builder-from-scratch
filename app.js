@@ -29,7 +29,7 @@ waterDropdown.addEventListener('change', () => {
     waterCount++;
   // call function to change water photo
     let value = waterDropdown.value;
-    waterImgel.src = `assets/water-${value}`;
+    waterImgel.src = `assets/water-${value}.jpg`;
   // call function to change stats
     displayCountStats();
 });
@@ -39,7 +39,7 @@ skylineDropdown.addEventListener('change', () => {
     skylineCount++;
   // call function to change skyline photo
     let value = skylineDropdown.value;
-    skylineImgEl.src = `assets/skyline-${value}`;
+    skylineImgEl.src = `assets/skyline-${value}.jpg`;
   // call function to change stats
     displayCountStats();
 });
@@ -49,7 +49,7 @@ natureDropdown.addEventListener('change', () => {
     natureCount++;
   // call function to change nature photo
     let value = natureDropdown.value;
-    natureImgEl.src = `assets/nature-${value}`;
+    natureImgEl.src = `assets/nature-${value}.jpg`;
   //call function to change stats
     displayCountStats();
 });
