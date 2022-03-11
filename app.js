@@ -61,8 +61,17 @@ userCityInput.addEventListener('input', () => {
 });
 
 sloganButton.addEventListener('click', () => {
-  // on click add sloganinput value to slogan array and display in slogan.
+  // on click add slogan input value to slogan array and display in slogan.
+    let value = userSloganInput.value;
+    sloganArr.push(value);
+    userSloganInput.value = '';
+    displaySlogans();
+
+    if (sloganArr.length >=3) {
+        sloganArr.shift();
+    }
   //add a classList so it will change the display style. 
+
 });
 
 
@@ -73,15 +82,20 @@ function displayCountStats() {
     nature scene ${natureCount} times!`;
 }
 
-function handleDropdown(){
-  //change src to another image as assigned
-    let value = waterImgel.value;
-    waterImgel.src = `assets/water-${value}`;
+function displaySlogans(){
+    displaySloganEl.textContent = '';
+    for (let slogan of sloganArr){
+        let pTag = document.createElement('p');
+        displaySloganEl.append(pTag);
+        pTag.textContent = slogan;
+    }
 }
 
-let waterScenes = [{display: 'Industrial', value: '1'}, {display: 'European', value: '2'},
-    {display: 'Neon', value: '3'}]; 
-let skylineScenes = [{display: 'Neon', value: '1'}, {display: 'European', value: '2'}, 
+
+
+let waterScenes = [{ display: 'Industrial', value: '1'}, {display: 'European', value: '2'},
+    { display: 'Neon', value: '3' }]; 
+let skylineScenes = [{ display: 'Neon', value: '1'}, {display: 'European', value: '2'}, 
     {display: 'Industrial', value: '3'},];
 let natureScenes = [{display: 'European', value: '1'}, {display: 'Neon', value: '2'}, 
     {display: 'Industrial', value: '3'}];

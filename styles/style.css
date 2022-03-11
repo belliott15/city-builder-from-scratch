@@ -3,11 +3,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --color1: #335c67;
+    --color2: #fff3b0;
+    --color3: #e09f3e;
+    --color4: #9e2a2b;
+    --color5: #540b0e;
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -29,7 +29,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: #540b0e;
 }
 
 main {
@@ -42,7 +42,7 @@ main {
 }
 
 section {
-    background-color: gray;
+    background-color: #968181;
     width: 100%;
     height: 100%;
     display: flex;
@@ -59,9 +59,10 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: #540b0e;
     height: var(--header-height);
     box-shadow: var(--shadow);
+    color: white;
 }
 
 
@@ -89,12 +90,20 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: #540b0e;
     box-shadow: var(--shadow);
+    color: white;
 }
 
 img {
     height: 13rem;
+    border-radius: 50%;
+    border: double black 2px;
+}
+
+p {
+    font-family: Abril Fatface, sans-serif;
+    font-size: 20px;
 }
 
 #first-column {
@@ -105,8 +114,8 @@ img {
 #first-column > div{
     height: 100%;
     width: 100%;
-    border: 1px solid black;
-    margin-bottom: 5px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,17 +133,54 @@ img {
 }
 
 #third-column > div {
-    border: solid black 1px;
+    /* border: solid black 1px; */
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    font-family: Abril Fatface, sans-serif;
 }
 
-#third-column > select {
-    display: block;
+select {
+    font-family: Abril Fatface, sans-serif;
+    width: 70%;
+    margin: 10px;
+    height: 30px;
+    font-size: 1.2em;
+}
+
+
+
+.slogan {
+    font-family: Abril Fatface, sans-serif;
+    font-size: 1em;
+}
+
+#display-slogan {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+input {
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border: inset rgb(83, 28, 28) 2px;
+}
+
+#slogan-button {
+    margin: 10px;
+    width: 100%;
+    height: 30px;
+    background-color:rgb(83, 28, 28);
+    color: white;
+    font-family: Abril Fatface, sans-serif;
+    border-radius: 10px;
 }

@@ -59,7 +59,7 @@ Visit the deployed pages on GitHub pages, with link in the About section of the 
 Events . . .	
 Select from at least three dropdowns (i.e. waterfront, skyline, castle) with at least three options each	2
 Three images displayed on the page. On choosing an option from the dropdown and see the change reflected in the UI with a new images (https://pixabay.com/ is a good source for free images)	2
-When submitting a slogan, add it to an array of slogans, clear the current DOM's list of slogans, and list all slogans a p tags in the DOM	4
+When submitting a slogan, add it to an array of slogans, clear the current DOM's list of slogans, and list all slogans as p tags in the DOM	4
 See displayed how many times each dropdown has been changed in the current session. Should report on all 3 dropdowns in the same div	4
 Functions	
 IMPURE: displayCountStats() : attaches a string to the DOM describing how many times each dropdown has been changed	3
