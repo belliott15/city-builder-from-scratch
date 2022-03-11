@@ -65,9 +65,13 @@ Functions
 IMPURE: displayCountStats() : attaches a string to the DOM describing how many times each dropdown has been changed	3
 IMPURE: displaySlogans() : clears DOM, loops through slogans, displays slogans on the page	3
 
-Add the option for the user to name the city and store the name in state. Display that name in big letters at the top. Additionally, when displaying slogans, every slogan should have the name of the city concatenated before it, like so: 'Portland: the city that works!', 'Portland: the big apple'.
-Make three arrays of objects of this kind of shape: [ { display: "Future City", value: "1" }, { display: "Big City", value: "2" }, { display: "Small City", value: "3" ]. Now, instead of hard coding your dropdown options, generate them dynamically by looping over these arrays.
-Wrap the slogan input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
-Use a radio button (probably the most challenging form input) to change between 'night mode' and 'day mode'. When in night mode, only show images of night-time and vice-versa.
+-Add the option for the user to name the city and store the name in state. Display that name in big letters at the top. Additionally, when displaying slogans, every slogan should have the name of the city concatenated before it, like so: 'Portland: the city that works!', 'Portland: the big apple'.
+
+-Make three arrays of objects of this kind of shape: [ { display: "Future City", value: "1" }, { display: "Big City", value: "2" }, { display: "Small City", value: "3" ]. Now, instead of hard coding your dropdown options, generate them dynamically by looping over these arrays.
+
+-Wrap the slogan input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
+
+-Use a radio button (probably the most challenging form input) to change between 'night mode' and 'day mode'. When in night mode, only show images of night-time and vice-versa.
 Add a selectable background noise to your city (traffic, birds, coffeeshop, for example)
-In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
+
+-In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.

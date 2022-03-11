@@ -10,6 +10,7 @@ const skylineDropdown = document.getElementById('skyline-dropdown');
 const natureDropdown = document.getElementById('nature-dropdown');
 
 const userCityInput = document.getElementById('user-city-input');
+const userCityButton = document.getElementById('city-button');
 
 const userSloganInput = document.getElementById('user-slogan-input');
 const sloganButton = document.getElementById('slogan-button');
@@ -22,6 +23,7 @@ let skylineCount = 0;
 let natureCount = 0;
 
 let sloganArr = [];
+let cityNames = [];
 // set event listeners 
 
 waterDropdown.addEventListener('change', () => {
@@ -54,10 +56,16 @@ natureDropdown.addEventListener('change', () => {
     displayCountStats();
 });
 
-userCityInput.addEventListener('input', () => {
-  // gather user input and place it into the welcome to section
-    welcomeMessage.textContent = `Welcome to ${userCityInput.value}!`;
-    welcomeMessage.classList.add('welcome');
+userCityButton.addEventListener('click', () => {
+  // gather user input and place it into the city name array
+    let value = userCityInput.value;
+    cityNames.push(value);
+    userCityInput.value = '';
+    // welcomeMessage.textContent = `Welcome to ${userCityInput.value}!`;
+    displayWelcome();
+    if (cityNames.length >= 0){
+        cityNames.shift();
+  }
 });
 
 sloganButton.addEventListener('click', () => {
@@ -70,8 +78,6 @@ sloganButton.addEventListener('click', () => {
     if (sloganArr.length >= 3) {
         sloganArr.shift();
     }
-  //add a classList so it will change the display style. 
-
 });
 
 
@@ -88,6 +94,16 @@ function displaySlogans(){
         let pTag = document.createElement('p');
         displaySloganEl.append(pTag);
         pTag.textContent = slogan;
+    }
+}
+
+function displayWelcome(){
+    welcomeMessage.textContent = '';
+    for (let cityName of cityNames) {
+        let pTag = document.createElement('p');
+        welcomeMessage.append(pTag);
+        pTag.textContent = `Greetings from ${cityName}`;
+        pTag.classList.add('welcome');
     }
 }
 

@@ -58,11 +58,14 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-color: #540b0e;
     height: var(--header-height);
     box-shadow: var(--shadow);
     color: white;
+    padding-left: 30px;
+    font-family: Abril Fatface, sans-serif;
+    font-size: larger;
 }
 
 
