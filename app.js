@@ -13,11 +13,93 @@ const userCityInput = document.getElementById('user-city-input');
 
 const userSloganInput = document.getElementById('user-slogan-input');
 const sloganButton = document.getElementById('slogan-button');
+const displaySloganEl = document.getElementById('display-slogan');
+
+const countString = document.getElementById('count-string');
 // let state
 let waterCount = 0;
 let skylineCount = 0;
 let natureCount = 0;
+
+let sloganArr = [];
 // set event listeners 
+
+waterDropdown.addEventListener('change', () => {
+  //increment waterCount
+    waterCount++;
+  // call function to change water photo
+  // call function to change stats
+    displayCountStats();
+});
+
+skylineDropdown.addEventListener('change', () => {
+  //increment skylineCount
+    skylineCount++;
+  // call function to change skyline photo
+  // call function to change stats
+    displayCountStats();
+});
+
+natureDropdown.addEventListener('change', () => {
+  //increment natureCount
+    natureCount++;
+  // call function to change nature photo
+  //call function to change stats
+    displayCountStats();
+});
+
+userCityInput.addEventListener('input', () => {
+  // gather user input and place it into the welcome to section
+    welcomeMessage.textContent = `Welcome to ${userCityInput.value}!`;
+    welcomeMessage.classList.add('welcome');
+});
+
+sloganButton.addEventListener('click', () => {
+  // on click add sloganinput value to slogan array and display in slogan.
+  //add a classList so it will change the display style. 
+});
+
+
+function displayCountStats() {
+  //try to make this a TDD function if you can
+    countString.textContent = `You have changed the waterfront ${waterCount} times
+    You have changed the skyline ${skylineCount} times! You have changed the 
+    nature scene ${natureCount} times!`;
+}
+
+function handleDropdown(){
+  //change src to another image as assigned
+}
+
+let waterScenes = [{display: 'Industrial', value: '1'}, {display: 'European', value: '2'},
+    {display: 'Neon', value: '3'}]; 
+let skylineScenes = [{display: 'Neon', value: '1'}, {display: 'European', value: '2'}, 
+    {display: 'Industrial', value: '3'},];
+let natureScenes = [{display: 'European', value: '1'}, {display: 'Neon', value: '2'}, 
+    {display: 'Industrial', value: '3'}];
+
+function getDropdownItems() {
+    for (let waterScene of waterScenes){
+        const option = document.createElement('option');
+        waterDropdown.append(option);
+        option.textContent = waterScene.display;
+        option.value = waterScene.value;
+    }
+    for (let skylineScene of skylineScenes){
+        const option = document.createElement('option');
+        skylineDropdown.append(option);
+        option.textContent = skylineScene.display;
+        option.value = skylineScene.value;
+    }
+    for (let natureScene of natureScenes){
+        const option = document.createElement('option');
+        natureDropdown.append(option);
+        option.textContent = natureScene.display;
+        option.value = natureScene.value;
+    }
+}
+getDropdownItems();
+
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
