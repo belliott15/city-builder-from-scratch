@@ -19,33 +19,34 @@
         </div>
     </header>
     <main>
-        <section class="first-column">
+        <section id="first-column">
             <div id="water-container">
-                <img id="waterImg" alt="photo of waterfront" src="" />
+                <img id="waterImg" alt="photo of waterfront" src="assets/water-1.jpg" />
             </div>
             <div id="skyline-container">
-                <img id="skylineImg" alt="photo of city skyline" src=""/>
+                <img id="skylineImg" alt="photo of city skyline" src="assets/skyline-1.jpg"/>
             </div>
-            <div id="skyline-container">
-                <img id="natureImg" alt="photo of nature scene" src=""/>
+            <div id="nature-container">
+                <img id="natureImg" alt="photo of nature scene" src="assets/nature-1.jpg"/>
             </div>
             <div id="count-containter">
+                <p>count string here</p><span id="count-string"></span>
             </div>
         </section>
-        <section>
-            <div id="welcome-message"></div>
+        <section id="second-column">
+            <div id="welcome-message">welcome message</div>
         </section>
-        <section>
+        <section id="third-column">
             <div id="dropdown-container">
-                <selector id="water-dropdown"></selector>
-                <selector id="skyline-dropdown"></selector>
-                <selector id="nature-dropdown"></selector>
+                <selector id="water-dropdown">options</selector>
+                <selector id="skyline-dropdown">options</selector>
+                <selector id="nature-dropdown">options</selector>
             </div>
             <div id="city-name-container">
-                <input id="userCityInput" />
+                <input id="user-city-input" />
             </div>
             <div>
-                <input id="userSloganInput" />
+                <input id="user-slogan-input" />
                 <button id="slogan-button">City Slogan</button>
             </div>
             <div id="display-slogan">
