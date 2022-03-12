@@ -15,56 +15,59 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
+            <h1>City Builder</h1>
         </div>
     </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+    <main> 
+        <section id="second-column">
+            <div id="welcome-message"></div>
+            <div id="display-slogan"></div>
         </section>
+        <section id="row-two">
+            <section id="first-column">
+                <div id="water-container">
+                    <select id="water-dropdown">options</select>
+                    <img id="waterImg" alt="photo of waterfront" src="assets/water-1.jpg" />
+                </div>
+                <audio id="water-sounds" src="/assets/water-sounds.wav" controls loop class="hidden"></audio>
+                <div id="skyline-container">
+                    <select id="skyline-dropdown">options</select>
+                    <img id="skylineImg" alt="photo of city skyline" src="assets/skyline-1.jpg"/>
+                </div>
+                <audio id="city-sounds" src="/assets/city-sounds.wav" controls loop class="hidden"></audio>
+                <div id="nature-container">
+                    <select id="nature-dropdown">options</select>
+                    <img id="natureImg" alt="photo of nature scene" src="assets/nature-1.jpg"/>
+                </div>
+                <audio id="nature-sounds" src="/assets/nature-sounds.wav" controls loop class="hidden"></audio>
+            </section>
+            <section>
+                <div id="count-containter">
+                    <!-- <input type="radio" value="cartoon" id="cartoonMode" />
+                    <label for="cartoonMode">Cartoon Mode</label>
+                    <input type="radio" value="painting" id="paintingtMode" />
+                    <label for="paintingMode">Painting Mode</label> -->
+                    <p>
+                        <span id="count-string"></span>
+                    </p>
+                </div>
+            </section>
+            <section id="third-column">
+                <div id="city-name-container">
+                    <input id="user-city-input" />
+                    <button id="city-button">Add City Name</button>
+                </div>
+                <form id="myForm" class="form">
+                    <div id="slogan-name-container" >
+                        <input id="user-slogan-input" />
+                        <button id="slogan-button" value="submit">City Slogan</button>
+                    </div>
+                </form>
+            </section>
+    </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
     </footer>
 
     <script type="module" src="./app.js"></script>

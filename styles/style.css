@@ -1,12 +1,13 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --color1: #335c67;
+    --color2: #fff3b0;
+    --color3: #e09f3e;
+    --color4: #9e2a2b;
+    --color5: #540b0e;
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -28,39 +29,45 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: #540b0e;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: .25fr 3.75fr;
+    /* grid-template-columns: 2fr 1fr 2fr; */
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    height: 100%;
 }
 
 section {
-    background-color: var(--color5);
-    max-width: 80%;
+    background-color: #ebedeecb;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    /* padding-top: var(--gutter); */
+    /* padding-bottom: var(--gutter); */
+    /* margin-top: var(--gutter); */
+    /* margin-bottom: var(--gutter); */
+    /* border: solid 2px var(--color1); */
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: flex-start;
+    background-color: #15616d;
     height: var(--header-height);
     box-shadow: var(--shadow);
+    color: white;
+    padding-left: 30px;
+    font-family: Abril Fatface, sans-serif;
+    font-size: larger;
 }
-
 
 h2 {
     font-size: 1.8rem;
@@ -86,6 +93,124 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: #15616d;
     box-shadow: var(--shadow);
+    color: white;
+}
+
+img {
+    height: 13rem;
+    border-radius: 50%;
+    border: double black 2px;
+    max-width: 310px;
+}
+
+p {
+    font-family: Abril Fatface, sans-serif;
+    font-size: 20px;
+}
+
+#row-two {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+#first-column > div{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.welcome{
+    font-size: 4em;
+    font-family: Abril Fatface, sans-serif;
+}
+
+#third-column > div {
+    /* border: solid black 1px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    font-family: Abril Fatface, sans-serif;
+}
+
+select {
+    font-family: Abril Fatface, sans-serif;
+    width: 70%;
+    margin: 10px;
+    height: 30px;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+
+
+.slogan {
+    font-family: Abril Fatface, sans-serif;
+    font-size: 1em;
+}
+
+#display-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+
+input {
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border: inset rgb(83, 28, 28) 2px;
+}
+
+#city-button {
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+    background-color:rgb(83, 28, 28);
+    color: white;
+    font-family: Abril Fatface, sans-serif;
+    border-radius: 10px;
+}
+
+#slogan-button {
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+    background-color:rgb(83, 28, 28);
+    color: white;
+    font-family: Abril Fatface, sans-serif;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+#waterImg:hover{
+    opacity: .60;
+    border-width: 6px;
+}
+
+#skylineImg:hover{
+    opacity: .60;
+    border-width: 6px;
+}
+
+#natureImg:hover{
+    opacity: .60;
+    border-width: 6px;
 }
