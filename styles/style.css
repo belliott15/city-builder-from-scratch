@@ -43,7 +43,7 @@ main {
 }
 
 section {
-    background-color: #968181;
+    background-color: #ebedeecb;
     width: 100%;
     height: 100%;
     display: flex;
@@ -60,7 +60,7 @@ section {
 header {
     display: flex;
     justify-content: flex-start;
-    background-color: #540b0e;
+    background-color: #15616d;
     height: var(--header-height);
     box-shadow: var(--shadow);
     color: white;
@@ -68,7 +68,6 @@ header {
     font-family: Abril Fatface, sans-serif;
     font-size: larger;
 }
-
 
 h2 {
     font-size: 1.8rem;
@@ -94,7 +93,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: #540b0e;
+    background-color: #15616d;
     box-shadow: var(--shadow);
     color: white;
 }
@@ -132,7 +131,6 @@ p {
     font-size: 4em;
     font-family: Abril Fatface, sans-serif;
 }
-
 
 #third-column > div {
     /* border: solid black 1px; */
@@ -196,4 +194,23 @@ input {
     color: white;
     font-family: Abril Fatface, sans-serif;
     border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+#waterImg:hover{
+    opacity: .60;
+    border-width: 6px;
+}
+
+#skylineImg:hover{
+    opacity: .60;
+    border-width: 6px;
+}
+
+#natureImg:hover{
+    opacity: .60;
+    border-width: 6px;
 }

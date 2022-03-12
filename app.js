@@ -17,6 +17,9 @@ const sloganButton = document.getElementById('slogan-button');
 const displaySloganEl = document.getElementById('display-slogan');
 
 const countString = document.getElementById('count-string');
+
+// const cartoonButton = document.getElementById('cartoonMode');
+// const paintingButton = document.getElementById('paintingMode');
 // let state
 let waterCount = 0;
 let skylineCount = 0;
@@ -63,7 +66,7 @@ userCityButton.addEventListener('click', () => {
     userCityInput.value = '';
     // welcomeMessage.textContent = `Welcome to ${userCityInput.value}!`;
     displayWelcome();
-    if (cityNames.length >= 0){
+    if (cityNames.length >= 1){
         cityNames.shift();
     }
 });
@@ -80,6 +83,36 @@ sloganButton.addEventListener('click', () => {
     }
 });
 
+waterImgel.addEventListener('click', () => {
+    const waterSounds = document.getElementById('water-sounds');
+    waterSounds.classList.remove('hidden');
+});
+
+skylineImgEl.addEventListener('click', () => {
+    const citySounds = document.getElementById('city-sounds');
+    citySounds.classList.remove('hidden');
+});
+
+natureImgEl.addEventListener('click', () => {
+    const natureSounds = document.getElementById('nature-sounds');
+    natureSounds.classList.remove('hidden');
+});
+
+
+
+// cartoonButton.addEventListener('click', () => {
+//     waterImgel.src = `assets/water-cartoon.jpg`;
+//     skylineImgEl.src = `/assets/skyline-cartoon.png`;
+//     natureImgEl.src = `assets/nature-cartoon.jpg`;
+// });
+
+// paintingButton.addEventListener('click', () => {
+//     waterImgel.src = `assets/water-painting.jpg`;
+//     skylineImgEl.src = `/assets/skyline-painting.png`;
+//     natureImgEl.src = `assets/nature-painting.jpg`;
+// });
+
+
 
 function displayCountStats() {
   //try to make this a TDD function if you can
@@ -93,7 +126,7 @@ function displaySlogans(){
     for (let slogan of sloganArr){
         let pTag = document.createElement('p');
         displaySloganEl.append(pTag);
-        pTag.textContent = slogan;
+        pTag.textContent = `- ${slogan}`;
     }
 }
 
@@ -108,11 +141,14 @@ function displayWelcome(){
 }
 
 let waterScenes = [{ display: 'Industrial', value: '1' }, { display: 'European', value: '2' },
-    { display: 'Neon', value: '3' }, { display: 'Renaissance', value: '4' }]; 
+    { display: 'Neon', value: '3' }, { display: 'Renaissance', value: '4' }, 
+    { display: 'Cartoon', value: 'cartoon' }, { display: 'Painting', value: 'painting' }]; 
 let skylineScenes = [{ display: 'Neon', value: '1' }, { display: 'European', value: '2' }, 
-    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' }];
+    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' }, 
+    { display: 'Cartoon', value: 'cartoon' }, { display: 'Painting', value: 'painting' }];
 let natureScenes = [{ display: 'European', value: '1' }, { display: 'Neon', value: '2' }, 
-    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' }];
+    { display: 'Industrial', value: '3' }, { display: 'Renaissance', value: '4' },
+    { display: 'Cartoon', value: 'cartoon' }, { display: 'Painting', value: 'painting' }];
 
 function getDropdownItems() {
     for (let waterScene of waterScenes){
@@ -135,6 +171,7 @@ function getDropdownItems() {
     }
 }
 getDropdownItems();
+displayCountStats();
 
   // get user input
   // use user input to update state 

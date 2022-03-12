@@ -29,22 +29,24 @@
                     <select id="water-dropdown">options</select>
                     <img id="waterImg" alt="photo of waterfront" src="assets/water-1.jpg" />
                 </div>
+                <audio id="water-sounds" src="/assets/water-sounds.wav" controls loop class="hidden"></audio>
                 <div id="skyline-container">
                     <select id="skyline-dropdown">options</select>
                     <img id="skylineImg" alt="photo of city skyline" src="assets/skyline-1.jpg"/>
                 </div>
+                <audio id="city-sounds" src="/assets/city-sounds.wav" controls loop class="hidden"></audio>
                 <div id="nature-container">
                     <select id="nature-dropdown">options</select>
                     <img id="natureImg" alt="photo of nature scene" src="assets/nature-1.jpg"/>
                 </div>
+                <audio id="nature-sounds" src="/assets/nature-sounds.wav" controls loop class="hidden"></audio>
             </section>
             <section>
-                <div id="dropdown-container">
-                    <!-- <select id="water-dropdown">options</select> -->
-                    <!-- <select id="skyline-dropdown">options</select> -->
-                    <!-- <select id="nature-dropdown">options</select> -->
-                </div>
                 <div id="count-containter">
+                    <!-- <input type="radio" value="cartoon" id="cartoonMode" />
+                    <label for="cartoonMode">Cartoon Mode</label>
+                    <input type="radio" value="painting" id="paintingtMode" />
+                    <label for="paintingMode">Painting Mode</label> -->
                     <p>
                         <span id="count-string"></span>
                     </p>
@@ -55,10 +57,12 @@
                     <input id="user-city-input" />
                     <button id="city-button">Add City Name</button>
                 </div>
+                <form id="myForm" class="form">
                     <div id="slogan-name-container" >
                         <input id="user-slogan-input" />
-                        <button id="slogan-button">City Slogan</button>
+                        <button id="slogan-button" value="submit">City Slogan</button>
                     </div>
+                </form>
             </section>
     </section>
     </main>
